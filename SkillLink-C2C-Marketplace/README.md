@@ -53,7 +53,7 @@ Part of the assignment was modelling the system before building it. The images a
 4. Optional: run `seed_demo_data.sql` for 5 demo users with listings and orders. Demo accounts use the password `password`.
 5. Open `http://localhost/skilllink/index.php`.
 
-On localhost the app connects as `root` with no password. For a live server, set `DB_HOST`, `DB_NAME`, `DB_USER` and `DB_PASS` as environment variables (see `db.php`).
+On localhost the app connects as `root` with no password. For a live server, replace the `PUT_YOUR_..._HERE` placeholders in `db.php` with your database details, or set `DB_HOST`, `DB_NAME`, `DB_USER` and `DB_PASS` as environment variables.
 
 To make yourself an admin, register normally and then run:
 

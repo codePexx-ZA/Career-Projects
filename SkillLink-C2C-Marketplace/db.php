@@ -17,15 +17,15 @@ function getPdo(): PDO
         $dbUser = getenv("DB_USER") ?: "root";
         $dbPass = getenv("DB_PASS") ?: "";
     } else {
-        $host = getenv("DB_HOST") ?: "";
-        $dbName = getenv("DB_NAME") ?: "";
-        $dbUser = getenv("DB_USER") ?: "";
-        $dbPass = getenv("DB_PASS") ?: "";
+        $host = getenv("DB_HOST") ?: "PUT_YOUR_DB_HOST_HERE";
+        $dbName = getenv("DB_NAME") ?: "PUT_YOUR_DB_NAME_HERE";
+        $dbUser = getenv("DB_USER") ?: "PUT_YOUR_DB_USER_HERE";
+        $dbPass = getenv("DB_PASS") ?: "PUT_YOUR_DB_PASSWORD_HERE";
     }
     $charset = "utf8mb4";
 
-    if (!$isLocal && ($host === "" || $dbName === "" || $dbUser === "" || $dbPass === "")) {
-        throw new RuntimeException("Set DB_HOST, DB_NAME, DB_USER and DB_PASS for the live database.");
+    if (!$isLocal && $dbPass === "PUT_YOUR_DB_PASSWORD_HERE") {
+        throw new RuntimeException("Set your live database details in db.php (or as DB_* environment variables) before running live.");
     }
 
     $dsn = "mysql:host={$host};dbname={$dbName};charset={$charset}";
