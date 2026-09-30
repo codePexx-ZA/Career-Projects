@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink — Create Profile</title>
+    <link rel="stylesheet" href="profile-creation.css">
+</head>
+<body class="profile-page">
+    <nav class="nav-bar profile-nav">
+        <label class="hamburger" for="menu-toggle-profile">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="menu-toggle-profile" class="menu-toggle">
+        <div class="nav-menu">
+            <a href="market.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="OrdersPage.html">Orders</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <div class="nav-menu-footer">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+        <a href="index.html" class="logo">SkillLink</a>
+    </nav>
+
+    <div class="profile-curve-container">
+        <div class="svg-container">
+            <svg viewBox="0 0 800 400" class="profile-curve-svg" preserveAspectRatio="none">
+                <path id="curve" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z"></path>
+            </svg>
+        </div>
+        <header class="profile-curve-header">
+            <h1>Create Your Profile</h1>
+            <p>Choose how you'll primarily use SkillLink — you can buy and sell at any time. This helps us tailor your experience.</p>
+        </header>
+    </div>
+
+    <main class="profile-main">
+        <div class="profile-layout">
+            <div class="profile-form-column">
+                <div class="edit-profile-card">
+                    <h2 class="profile-section-heading">Personal Details</h2>
+
+                    <form class="profile-form" action="profile-created.html" method="get" id="profile-create-form">
+                        <div id="panel-userinfo" class="profile-userinfo-block">
+                            <h3 class="profile-subheading">User info</h3>
+                            <div class="form-row two-cols">
+                                <div class="form-group">
+                                    <label for="fullname" class="visually-hidden">Full Name</label>
+                                    <input type="text" id="fullname" name="fullname" placeholder="Enter full name" aria-label="Full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username" class="visually-hidden">Username</label>
+                                    <input type="text" id="username" name="username" placeholder="Enter username" aria-label="Username">
+                                </div>
+                            </div>
+                            <div class="form-row two-cols">
+                                <div class="form-group">
+                                    <label for="password" class="visually-hidden">Password</label>
+                                    <input type="password" id="password" name="password" placeholder="Enter password" aria-label="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-password" class="visually-hidden">Confirm Password</label>
+                                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Enter confirm password" aria-label="Confirm password">
+                                </div>
+                            </div>
+                            <div class="form-row two-cols">
+                                <div class="form-group">
+                                    <label for="email" class="visually-hidden">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter email address" aria-label="Email address">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-email" class="visually-hidden">Confirm Email Address</label>
+                                    <input type="email" id="confirm-email" name="confirm-email" placeholder="Enter confirm email address" aria-label="Confirm email address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <section class="profile-section profile-section-billing">
+                            <h2 class="profile-section-heading">Billing Information</h2>
+                            <div class="form-actions">
+                                <a href="billing.html" class="btn-secondary btn-add-billing">Add billing information</a>
+                            </div>
+                        </section>
+
+            <section class="profile-section seller-fields">
+                <h2 class="profile-section-heading">Profile Information</h2>
+                <div class="form-row">
+                    <div class="form-group photo-upload">
+                        <label>Profile / Team Photo</label>
+                        <div class="photo-dropzone" id="seller-photo-dropzone">
+                            <input type="file" id="photo" accept="image/*">
+                            <span class="photo-placeholder">Upload a photo of you or your team</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="category">Service Category</label>
+                    <input type="hidden" name="category" id="category" value="">
+                    <div class="dropdown-wrapper category-dropdown">
+                        <button type="button" class="dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                            <span class="dropdown-trigger-text">Select your main service</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" role="listbox">
+                            <div class="dropdown-item" data-value="tree-felling">Tree Felling</div>
+                            <div class="dropdown-item" data-value="plumbing">Plumbing</div>
+                            <div class="dropdown-item" data-value="electrical">Electrical</div>
+                            <div class="dropdown-item" data-value="gardening">Gardening</div>
+                            <div class="dropdown-item" data-value="painting">Painting</div>
+                            <div class="dropdown-item" data-value="cleaning">Cleaning</div>
+                            <div class="dropdown-item" data-value="carpentry">Carpentry</div>
+                            <div class="dropdown-item" data-value="other">Other</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Reviews (visible to buyers)</label>
+                    <div class="reviews-preview">
+                        <div class="review-item">
+                            <span class="review-stars">★★★★★</span>
+                            <span class="review-text">Excellent work, very professional.</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-stars">★★★★☆</span>
+                            <span class="review-text">Good quality, would recommend.</span>
+                        </div>
+                        <div class="review-item">
+                            <span class="review-stars">★★★★★</span>
+                            <span class="review-text">Fast and reliable service.</span>
+                        </div>
+                        <p class="reviews-hint">Ratings will appear here as you receive them</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Profile Photo (optional)</label>
+                    <div class="photo-dropzone small">
+                        <input type="file" id="buyer-photo" accept="image/*">
+                        <span class="photo-placeholder">Add a photo</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="display-name" class="visually-hidden">Display Name</label>
+                    <input type="text" id="display-name" name="display-name" placeholder="Enter display name" aria-label="Display name">
+                </div>
+            </section>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-secondary btn-update-info">Create Profile</button>
+            </div>
+        </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function() {
+            var curve = document.getElementById("curve");
+            if (!curve) return;
+            var defaultCurveValue = 350;
+            var curveRate = 3;
+            var ticking = false;
+            function scrollEvent(scrollPos) {
+                if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
+                    var curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
+                    curve.setAttribute("d", "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z");
+                }
+            }
+            window.addEventListener("scroll", function() {
+                var scrollPos = window.scrollY;
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        scrollEvent(scrollPos);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
+    </script>
+    <script>
+        (function() {
+            var wrapper = document.querySelector('.category-dropdown');
+            if (!wrapper) return;
+            var trigger = wrapper.querySelector('.dropdown-trigger');
+            var triggerText = wrapper.querySelector('.dropdown-trigger-text');
+            var menu = wrapper.querySelector('.dropdown-menu');
+            var hiddenInput = document.getElementById('category');
+            var items = wrapper.querySelectorAll('.dropdown-item');
+
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                wrapper.classList.toggle('active');
+                trigger.setAttribute('aria-expanded', wrapper.classList.contains('active'));
+            });
+
+            items.forEach(function(item) {
+                item.addEventListener('click', function() {
+                    var value = item.getAttribute('data-value');
+                    var text = item.textContent.trim();
+                    if (hiddenInput) hiddenInput.value = value;
+                    if (triggerText) triggerText.textContent = text;
+                    wrapper.classList.remove('active');
+                    trigger.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!wrapper.contains(e.target)) {
+                    wrapper.classList.remove('active');
+                    trigger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

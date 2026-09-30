@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink - My Profile</title>
+    <link rel="stylesheet" href="profile-creation.css">
+    <link rel="stylesheet" href="app-nav.css">
+</head>
+<body class="profile-page">
+    <nav class="nav-bar profile-nav">
+        <label class="hamburger" for="menu-toggle-profile-view">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="menu-toggle-profile-view" class="menu-toggle">
+        <div class="nav-menu">
+            <p class="nav-menu-user-badge nav-menu-user-badge-online">Account: Online</p>
+            <a href="market.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="OrdersPage.html">Orders</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <div class="nav-menu-footer">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+        <a href="index.html" class="logo">SkillLink</a>
+    </nav>
+
+    <div class="profile-curve-container">
+        <div class="svg-container">
+            <svg viewBox="0 0 800 400" class="profile-curve-svg" preserveAspectRatio="none">
+                <path id="curve" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z"></path>
+            </svg>
+        </div>
+        <header class="profile-curve-header">
+            <h1>Your Profile</h1>
+            <p>View your saved information and use the edit buttons below to update each section.</p>
+        </header>
+    </div>
+
+    <main class="profile-main">
+        <div class="profile-layout">
+            <div class="profile-form-column">
+                <form class="profile-form" action="#" method="get">
+                <div class="edit-profile-card">
+                    <h2 class="profile-section-heading">Personal Details</h2>
+                    <h3 class="profile-subheading">User info</h3>
+                    <div class="form-row two-cols">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" value="John Doe" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Username</label>
+                            <input type="text" value="john_doe" readonly>
+                        </div>
+                    </div>
+                    <div class="form-row two-cols">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="text" value="john.doe@email.com" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Display Name</label>
+                            <input type="text" value="John" readonly>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <a href="profile-creation.html" class="btn-secondary">Edit information</a>
+                    </div>
+                </div>
+
+                <section class="profile-section profile-section-billing edit-profile-card">
+                    <h2 class="profile-section-heading">Billing Information</h2>
+                    <h3 class="profile-subheading">Billing details</h3>
+                    <div class="form-row two-cols">
+                        <div class="form-group">
+                            <label for="billing-card-holder" class="visually-hidden">Card Holder</label>
+                            <input type="text" id="billing-card-holder" value="John Doe" readonly aria-label="Card Holder">
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-email" class="visually-hidden">Billing Email</label>
+                            <input type="text" id="billing-email" value="john.doe@email.com" readonly aria-label="Billing Email">
+                        </div>
+                    </div>
+                    <div class="form-row two-cols">
+                        <div class="form-group">
+                            <label for="billing-card-number" class="visually-hidden">Card Number</label>
+                            <input type="text" id="billing-card-number" value="**** **** **** 1234" readonly aria-label="Card Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="billing-address" class="visually-hidden">Billing Address</label>
+                            <input type="text" id="billing-address" value="Cape Town, South Africa" readonly aria-label="Billing Address">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <a href="profile-creation.html" class="btn-secondary">Edit information</a>
+                    </div>
+                </section>
+
+                <section class="profile-section edit-profile-card">
+                    <h2 class="profile-section-heading">Profile Information</h2>
+                    <h3 class="profile-subheading">Profile details</h3>
+                    <div class="form-group">
+                        <label for="profile-service-category" class="visually-hidden">Service Category</label>
+                        <input type="text" id="profile-service-category" value="Plumbing" readonly aria-label="Service Category">
+                    </div>
+                    <div class="form-group">
+                        <label>Reviews (visible to buyers)</label>
+                        <div class="reviews-preview">
+                            <div class="review-item">
+                                <span class="review-stars">★★★★★</span>
+                                <span class="review-text">Excellent work, very professional.</span>
+                            </div>
+                            <div class="review-item">
+                                <span class="review-stars">★★★★☆</span>
+                                <span class="review-text">Good quality, would recommend.</span>
+                            </div>
+                            <div class="review-item">
+                                <span class="review-stars">★★★★★</span>
+                                <span class="review-text">Fast and reliable service.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <a href="profile-creation.html" class="btn-secondary">Edit information</a>
+                    </div>
+                </section>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div class="account-status-indicator account-status-active" role="status" aria-label="Account status: Online">
+        Online
+    </div>
+
+    <script>
+        (function() {
+            var curve = document.getElementById("curve");
+            if (!curve) return;
+            var defaultCurveValue = 350;
+            var curveRate = 3;
+            var ticking = false;
+            function scrollEvent(scrollPos) {
+                if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
+                    var curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
+                    curve.setAttribute("d", "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z");
+                }
+            }
+            window.addEventListener("scroll", function() {
+                var scrollPos = window.scrollY;
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        scrollEvent(scrollPos);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

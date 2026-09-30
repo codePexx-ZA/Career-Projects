@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink — Market</title>
+    <link rel="stylesheet" href="market.css?v=sidebar-buttons">
+</head>
+<body class="market-page">
+    <nav class="nav-bar market-nav">
+        <label class="hamburger" for="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <div class="nav-menu">
+            <a href="market.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="OrdersPage.html">Orders</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <div class="nav-menu-footer">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+        <a href="market.html" class="logo">SkillLink</a>
+    </nav>
+
+    <main class="market-main">
+        <div class="market-layout">
+            <aside class="market-sidebar">
+                <a href="create-listing.html" class="btn-add-listing">Add listing</a>
+
+                <section class="my-listings-panel">
+                    <h2 class="my-listings-title">My listings</h2>
+                    <ul class="my-listings-list">
+                        <li class="my-listing-item">
+                            <span class="my-listing-emoji">🌳</span>
+                            <div class="my-listing-copy">
+                                <p class="my-listing-name">Thabo Tree Services</p>
+                                <p class="my-listing-meta">Active · R1200</p>
+                            </div>
+                        </li>
+                        <li class="my-listing-item">
+                            <span class="my-listing-emoji">🔧</span>
+                            <div class="my-listing-copy">
+                                <p class="my-listing-name">Weekend Plumbing Fix</p>
+                                <p class="my-listing-meta">Pending review · R650</p>
+                            </div>
+                        </li>
+                        <li class="my-listing-item">
+                            <span class="my-listing-emoji">⚡</span>
+                            <div class="my-listing-copy">
+                                <p class="my-listing-name">DB Board Upgrade</p>
+                                <p class="my-listing-meta">Active · R950</p>
+                            </div>
+                        </li>
+                        <li class="my-listing-item">
+                            <span class="my-listing-emoji">🧹</span>
+                            <div class="my-listing-copy">
+                                <p class="my-listing-name">Deep Clean Package</p>
+                                <p class="my-listing-meta">Draft · R450</p>
+                            </div>
+                        </li>
+                        <li class="my-listing-item">
+                            <span class="my-listing-emoji">🪚</span>
+                            <div class="my-listing-copy">
+                                <p class="my-listing-name">Cupboard Install</p>
+                                <p class="my-listing-meta">Active · R1800</p>
+                            </div>
+                        </li>
+                        <li class="my-listing-item">
+                            <span class="my-listing-emoji">🎨</span>
+                            <div class="my-listing-copy">
+                                <p class="my-listing-name">Interior Repaint</p>
+                                <p class="my-listing-meta">Archived · R700</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <a href="edit-listings.html" class="btn-edit-listings">Edit listings</a>
+            </aside>
+
+            <div class="market-content">
+        <div class="market-toolbar">
+            <div class="toolbar-left">
+                <div class="filter-dropdown">
+                    <label for="filter">Sort</label>
+                    <div class="dropdown-wrapper market-dropdown" data-dropdown="filter">
+                        <button type="button" id="filter" class="dropdown-trigger" aria-haspopup="listbox" aria-expanded="false">
+                            <span class="dropdown-trigger-text">Newest</span>
+                            <svg class="chevron-icon" viewBox="0 0 24 24" width="16" height="16">
+                                <path d="M7 10l5 5 5-5z" fill="currentColor"></path>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" role="listbox">
+                            <div class="dropdown-item" data-value="newest">Newest</div>
+                            <div class="dropdown-item" data-value="price-high">Price: High to Low</div>
+                            <div class="dropdown-item" data-value="price-low">Price: Low to High</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-wrap">
+                <label class="search-label" for="market-search">Search</label>
+                <div class="search-field">
+                    <input type="search" id="market-search" placeholder="Search by profile or listing name..." class="search-input">
+                    <button type="button" class="btn-search">Search</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="listings">
+            <article class="listing-card">
+                <div class="listing-image">👷</div>
+                <div class="listing-body">
+                    <h3>Thabo Tree Services</h3>
+                    <p class="listing-category">Tree Felling</p>
+                    <p class="listing-location">Johannesburg North</p>
+                    <span class="listing-rating">★★★★★ 4.9</span>
+                    <span class="listing-price">From R350</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🔧</div>
+                <div class="listing-body">
+                    <h3>Pieter Plumbing</h3>
+                    <p class="listing-category">Plumbing</p>
+                    <p class="listing-location">Pretoria East</p>
+                    <span class="listing-rating">★★★★☆ 4.6</span>
+                    <span class="listing-price">From R280</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">⚡</div>
+                <div class="listing-body">
+                    <h3>Electric Solutions SA</h3>
+                    <p class="listing-category">Electrical</p>
+                    <p class="listing-location">Cape Town CBD</p>
+                    <span class="listing-rating">★★★★★ 4.8</span>
+                    <span class="listing-price">From R450</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🌿</div>
+                <div class="listing-body">
+                    <h3>Green Thumb Gardeners</h3>
+                    <p class="listing-category">Gardening</p>
+                    <p class="listing-location">Durban Central</p>
+                    <span class="listing-rating">★★★★☆ 4.5</span>
+                    <span class="listing-price">From R200</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🪣</div>
+                <div class="listing-body">
+                    <h3>Fresh Coat Painters</h3>
+                    <p class="listing-category">Painting</p>
+                    <p class="listing-location">Sandton</p>
+                    <span class="listing-rating">★★★★★ 4.7</span>
+                    <span class="listing-price">From R400</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🧹</div>
+                <div class="listing-body">
+                    <h3>Spick & Span</h3>
+                    <p class="listing-category">Cleaning</p>
+                    <p class="listing-location">Rosebank</p>
+                    <span class="listing-rating">★★★★☆ 4.4</span>
+                    <span class="listing-price">From R150/hr</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🪚</div>
+                <div class="listing-body">
+                    <h3>Master Carpentry Co</h3>
+                    <p class="listing-category">Carpentry</p>
+                    <p class="listing-location">Centurion</p>
+                    <span class="listing-rating">★★★★★ 4.9</span>
+                    <span class="listing-price">From R550</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🛠️</div>
+                <div class="listing-body">
+                    <h3>All-Round Handyman</h3>
+                    <p class="listing-category">General Repairs</p>
+                    <p class="listing-location">Randburg</p>
+                    <span class="listing-rating">★★★★☆ 4.3</span>
+                    <span class="listing-price">From R250</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🌳</div>
+                <div class="listing-body">
+                    <h3>Urban Tree Care</h3>
+                    <p class="listing-category">Tree Felling</p>
+                    <p class="listing-location">Fourways</p>
+                    <span class="listing-rating">★★★★★ 4.8</span>
+                    <span class="listing-price">From R420</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">💧</div>
+                <div class="listing-body">
+                    <h3>Quick Fix Plumbing</h3>
+                    <p class="listing-category">Plumbing</p>
+                    <p class="listing-location">Roodepoort</p>
+                    <span class="listing-rating">★★★★☆ 4.5</span>
+                    <span class="listing-price">From R220</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🔌</div>
+                <div class="listing-body">
+                    <h3>SafeSwitch Electrical</h3>
+                    <p class="listing-category">Electrical</p>
+                    <p class="listing-location">Midrand</p>
+                    <span class="listing-rating">★★★★★ 4.7</span>
+                    <span class="listing-price">From R380</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🌸</div>
+                <div class="listing-body">
+                    <h3>Bloem Garden Services</h3>
+                    <p class="listing-category">Gardening</p>
+                    <p class="listing-location">Bloemfontein</p>
+                    <span class="listing-rating">★★★★☆ 4.2</span>
+                    <span class="listing-price">From R180</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🎨</div>
+                <div class="listing-body">
+                    <h3>ProPaint Studio</h3>
+                    <p class="listing-category">Painting</p>
+                    <p class="listing-location">Port Elizabeth</p>
+                    <span class="listing-rating">★★★★★ 4.6</span>
+                    <span class="listing-price">From R350</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🪑</div>
+                <div class="listing-body">
+                    <h3>Fine Furniture Works</h3>
+                    <p class="listing-category">Carpentry</p>
+                    <p class="listing-location">Stellenbosch</p>
+                    <span class="listing-rating">★★★★☆ 4.4</span>
+                    <span class="listing-price">From R480</span>
+                </div>
+            </article>
+            <article class="listing-card">
+                <div class="listing-image">🧽</div>
+                <div class="listing-body">
+                    <h3>Clean & Tidy SA</h3>
+                    <p class="listing-category">Cleaning</p>
+                    <p class="listing-location">East London</p>
+                    <span class="listing-rating">★★★★★ 4.8</span>
+                    <span class="listing-price">From R120/hr</span>
+                </div>
+            </article>
+        </section>
+
+        <div class="load-more-wrap">
+            <button type="button" class="btn-load-more">Load more</button>
+        </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        (function() {
+            var wrappers = document.querySelectorAll('.market-dropdown');
+            wrappers.forEach(function(wrapper) {
+                var trigger = wrapper.querySelector('.dropdown-trigger');
+                var triggerText = wrapper.querySelector('.dropdown-trigger-text');
+                var items = wrapper.querySelectorAll('.dropdown-item');
+
+                trigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    wrappers.forEach(function(w) {
+                        if (w !== wrapper) w.classList.remove('active');
+                    });
+                    wrapper.classList.toggle('active');
+                    trigger.setAttribute('aria-expanded', wrapper.classList.contains('active'));
+                });
+
+                items.forEach(function(item) {
+                    item.addEventListener('click', function() {
+                        var text = item.textContent.trim();
+                        if (triggerText) triggerText.textContent = text;
+                        wrapper.classList.remove('active');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    });
+                });
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.market-dropdown')) {
+                    document.querySelectorAll('.market-dropdown').forEach(function(w) {
+                        w.classList.remove('active');
+                        var t = w.querySelector('.dropdown-trigger');
+                        if (t) t.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        })();
+    </script>
+</body>
+</html>

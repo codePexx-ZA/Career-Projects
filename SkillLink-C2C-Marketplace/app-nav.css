@@ -1,0 +1,85 @@
+.nav-bar .hamburger {
+    position: relative;
+    z-index: 102;
+}
+
+.nav-bar .nav-menu {
+    z-index: 101;
+}
+
+.nav-bar .menu-toggle {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.nav-menu-admin-badge {
+    margin: 0 0 0.85rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(40, 90, 72, 0.12);
+    color: #285A48;
+    border: 1px solid rgba(40, 90, 72, 0.2);
+}
+ 
+.nav-menu-role {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #285A48;
+}
+
+.admin-page .nav-menu-admin-badge {
+    background: rgba(47, 47, 228, 0.22);
+    color: #eef1ff;
+    border-color: rgba(47, 47, 228, 0.45);
+}
+
+.admin-page .nav-menu-role {
+    color: #c5ccff;
+}
+
+.nav-menu-user-badge {
+    margin: 0 0 0.85rem 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+}
+
+.nav-menu-user-badge-online {
+    background: rgba(40, 138, 113, 0.12);
+    color: #1f6f5d;
+    border-color: rgba(40, 138, 113, 0.28);
+}
+
+.nav-menu-user-badge-promoted {
+    background: rgba(47, 47, 228, 0.12);
+    color: #1f2a9e;
+    border-color: rgba(47, 47, 228, 0.28);
+}
+
+.nav-menu-user-badge-restricted {
+    background: rgba(196, 140, 34, 0.14);
+    color: #7a5b12;
+    border-color: rgba(196, 140, 34, 0.28);
+}
+
+.nav-menu-user-badge-deleted {
+    background: rgba(184, 74, 58, 0.12);
+    color: #8e362a;
+    border-color: rgba(184, 74, 58, 0.28);
+}

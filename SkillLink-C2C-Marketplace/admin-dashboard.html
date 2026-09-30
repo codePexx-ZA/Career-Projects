@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink - Admin Dashboard (Design Preview)</title>
+    <link rel="stylesheet" href="admin-dashboard.css">
+    <link rel="stylesheet" href="app-nav.css">
+</head>
+<body class="admin-page">
+    <nav class="nav-bar admin-nav nav-admin-session">
+        <input type="checkbox" id="menu-toggle-admin" class="menu-toggle">
+        <label class="hamburger" for="menu-toggle-admin">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <div class="nav-menu">
+            <p class="nav-menu-admin-badge">Signed in as Admin</p>
+            <a href="admin-dashboard.html">Admin Dashboard</a>
+            <a href="market.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="OrdersPage.html">Orders</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <div class="nav-menu-footer">
+                <span class="nav-menu-role">Administrator</span>
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+        <a href="admin-dashboard.html" class="logo">SkillLink Admin</a>
+    </nav>
+
+    <main class="admin-main">
+        <section class="admin-header-row" aria-label="Dashboard header">
+            <div class="admin-header admin-header-welcome">
+                <p class="admin-welcome-eyebrow">Welcome back</p>
+                <h2 class="admin-welcome-name">Liam Dalgleish</h2>
+                <p class="admin-welcome-meta">Signed in as Administrator</p>
+            </div>
+            <div class="admin-header admin-header-title">
+                <h1 class="admin-title">SkillLink Admin Dashboard</h1>
+                <p class="admin-subtitle">Listings, disputes, and user accounts — design preview (static data)</p>
+            </div>
+        </section>
+
+        <section class="admin-stats admin-stats-4" aria-label="Key metrics">
+            <article class="admin-stat-card">
+                <p class="admin-stat-label">Total Users</p>
+                <p class="admin-stat-value">6</p>
+                <p class="admin-stat-meta">+1 this week</p>
+            </article>
+            <article class="admin-stat-card">
+                <p class="admin-stat-label">Active Listings</p>
+                <p class="admin-stat-value">4</p>
+                <p class="admin-stat-meta">1 awaiting approval</p>
+            </article>
+            <article class="admin-stat-card">
+                <p class="admin-stat-label">Open Disputes</p>
+                <p class="admin-stat-value">1</p>
+                <p class="admin-stat-meta">1 unassigned</p>
+            </article>
+            <article class="admin-stat-card">
+                <p class="admin-stat-label">Account Actions</p>
+                <p class="admin-stat-value">4</p>
+                <p class="admin-stat-meta">Recorded in completed history</p>
+            </article>
+        </section>
+
+        <section class="admin-stack">
+            <section class="admin-card">
+                <h2 class="admin-card-title">Listing Approval Queue</h2>
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Listing</th>
+                                <th>Seller</th>
+                                <th>Category</th>
+                                <th>Location</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Nomsa Sparkle Clean
+                                    <span class="admin-row-meta">R450 / per visit</span>
+                                </td>
+                                <td>Nomsa Khumalo</td>
+                                <td>Cleaning</td>
+                                <td>Sandton, Johannesburg</td>
+                                <td><span class="badge badge-warning">Flagged</span></td>
+                                <td>
+                                    <div class="inline-actions">
+                                        <button class="btn-chip btn-chip-approve" type="button">Approve</button>
+                                        <button class="btn-chip btn-chip-reject" type="button">Reject</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="admin-card">
+                <h2 class="admin-card-title">Recent Disputes and Safety Cases</h2>
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Case ID</th>
+                                <th>Summary</th>
+                                <th>Buyer vs Seller</th>
+                                <th>Status</th>
+                                <th>Owner</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#DS-1</td>
+                                <td>Buyer reports incomplete tree removal; seller says scope was agreed...</td>
+                                <td>Joseph Tshabalala vs Thabo Mokoena</td>
+                                <td><span class="badge badge-warning">Open</span></td>
+                                <td><span class="admin-row-meta">Unassigned</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section class="admin-card admin-user-card">
+                <h2 class="admin-card-title">User Profile Management</h2>
+
+                <div class="admin-tabs" role="tablist" aria-label="User account tabs">
+                    <button type="button" class="admin-tab admin-tab-active" role="tab" aria-selected="true">Current Accounts</button>
+                    <button type="button" class="admin-tab" role="tab" aria-selected="false">Completed Accounts</button>
+                </div>
+
+                <div class="admin-tab-panel admin-tab-panel-active">
+                    <p class="admin-tab-intro">Choose an action to apply instantly. Ignored accounts are logged without changing status.</p>
+                    <form action="admin-dashboard.html" method="get" class="admin-user-search-form">
+                        <div class="search-wrap">
+                            <label class="search-label" for="admin-user-search">Search</label>
+                            <div class="search-field">
+                                <input type="search" id="admin-user-search" name="user_q" placeholder="Search by user email..." class="search-input">
+                                <button type="submit" class="btn-search">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="admin-table-wrap">
+                        <table class="admin-table admin-user-table">
+                            <thead>
+                                <tr>
+                                    <th>User</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        Thabo Mokoena
+                                        <span class="admin-row-meta">thabo.mokoena@skilllink.demo · @thabo_tree</span>
+                                    </td>
+                                    <td><span class="badge badge-success">Online</span></td>
+                                    <td>
+                                        <div class="inline-actions">
+                                            <button class="btn-chip btn-chip-promote" type="button">Promote</button>
+                                            <button class="btn-chip btn-chip-restrict" type="button">Restrict</button>
+                                            <button class="btn-chip btn-chip-delete" type="button">Delete</button>
+                                            <button class="btn-chip btn-chip-ignore" type="button">Ignore</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Nomsa Khumalo
+                                        <span class="admin-row-meta">nomsa.khumalo@skilllink.demo · @nomsa_clean</span>
+                                    </td>
+                                    <td><span class="badge badge-promoted">Promoted</span></td>
+                                    <td>
+                                        <div class="inline-actions">
+                                            <button class="btn-chip btn-chip-promote" type="button">Promote</button>
+                                            <button class="btn-chip btn-chip-restrict" type="button">Restrict</button>
+                                            <button class="btn-chip btn-chip-delete" type="button">Delete</button>
+                                            <button class="btn-chip btn-chip-ignore" type="button">Ignore</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

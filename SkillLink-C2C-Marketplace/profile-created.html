@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink - Profile Created</title>
+    <link rel="stylesheet" href="profile-created.css">
+</head>
+<body class="profile-created-page">
+    <nav class="nav-bar profile-nav">
+        <label class="hamburger" for="menu-toggle-created">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <input type="checkbox" id="menu-toggle-created" class="menu-toggle">
+        <div class="nav-menu">
+            <a href="market.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="OrdersPage.html">Orders</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <div class="nav-menu-footer">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+        <a href="index.html" class="logo">SkillLink</a>
+    </nav>
+
+    <main class="created-main">
+        <header class="created-header">
+            <h1>Profile Has Been Created</h1>
+            <p>Your profile details are saved below. You can edit them or continue to the market.</p>
+        </header>
+
+        <section class="created-layout">
+            <aside class="profile-summary-card">
+                <h2 class="profile-summary-name" id="summary-name">Your name</h2>
+                <p class="profile-summary-username" id="summary-username">Your username</p>
+                <div class="profile-avatar-wrap">
+                    <div class="profile-avatar">
+                        <img src="https://picsum.photos/seed/avatar/200/200" alt="Profile" id="summary-avatar">
+                    </div>
+                </div>
+                <p class="profile-member-since">Member Since: 29 September 2019</p>
+            </aside>
+
+            <section class="created-details-card">
+                <h2 class="profile-section-heading">Profile Information</h2>
+
+                <div class="detail-grid">
+                    <div class="detail-item">
+                        <span class="detail-label">Full Name</span>
+                        <span class="detail-value" id="detail-fullname">Not provided</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Username</span>
+                        <span class="detail-value" id="detail-username">Not provided</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Email</span>
+                        <span class="detail-value" id="detail-email">Not provided</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Display Name</span>
+                        <span class="detail-value" id="detail-display-name">Not provided</span>
+                    </div>
+                    <div class="detail-item detail-item-wide">
+                        <span class="detail-label">Service Category</span>
+                        <span class="detail-value" id="detail-category">Not selected</span>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <a href="profile-creation.html" class="btn-secondary">Edit information</a>
+                    <a href="market.html" class="btn-primary">Continue</a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        (function() {
+            var params = new URLSearchParams(window.location.search);
+
+            function textOrFallback(value, fallback) {
+                var v = (value || "").trim();
+                return v === "" ? fallback : v;
+            }
+
+            function setText(id, value) {
+                var el = document.getElementById(id);
+                if (el) el.textContent = value;
+            }
+
+            var fullName = textOrFallback(params.get("fullname"), "Your name");
+            var username = textOrFallback(params.get("username"), "Your username");
+            var email = textOrFallback(params.get("email"), "Not provided");
+            var displayName = textOrFallback(params.get("display-name"), "Not provided");
+            var category = textOrFallback(params.get("category"), "Not selected");
+            var prettyCategory = category.replace(/-/g, " ").replace(/\b\w/g, function(c) { return c.toUpperCase(); });
+
+            setText("summary-name", fullName);
+            setText("summary-username", username);
+            setText("detail-fullname", fullName);
+            setText("detail-username", username);
+            setText("detail-email", email);
+            setText("detail-display-name", displayName);
+            setText("detail-category", prettyCategory);
+
+            var avatar = document.getElementById("summary-avatar");
+            if (avatar) {
+                try {
+                    var storedAvatar = localStorage.getItem("skilllinkProfileAvatar");
+                    if (storedAvatar) avatar.src = storedAvatar;
+                } catch (e) {
+                }
+            }
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillLink — Edit Listings</title>
+    <link rel="stylesheet" href="listing-form.css">
+</head>
+<body class="listing-form-page">
+    <nav class="nav-bar market-nav">
+        <label class="hamburger" for="menu-toggle-edit-listings">
+            <span></span>
+            <span></span>
+            <span></span> 
+        </label>
+        <input type="checkbox" id="menu-toggle-edit-listings" class="menu-toggle">
+        <div class="nav-menu">
+            <a href="market.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="OrdersPage.html">Orders</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <div class="nav-menu-footer">
+                <a href="index.html">Log Out</a>
+            </div>
+        </div>
+        <a href="market.html" class="logo">SkillLink</a>
+    </nav>
+
+    <main class="listing-form-main">
+        <header class="listing-form-header">
+            <h1>Edit Listings</h1>
+            <p>Update your saved listings below.</p>
+        </header>
+
+        <form class="edit-listing-card" action="market.html" method="get">
+            <h2>Thabo Tree Services</h2>
+            <div class="edit-listing-meta">
+                <span>Posted: 4 Jun 2026</span>
+                <span class="edit-listing-status">Active</span>
+            </div>
+
+            <div class="form-group">
+                <label for="business_name_1">Business / service name</label>
+                <input type="text" id="business_name_1" name="business_name" value="Thabo Tree Services">
+            </div>
+
+            <div class="form-group">
+                <label for="category_id_1">Service category</label>
+                <select id="category_id_1" name="category_id">
+                    <option value="tree-felling" selected>Tree Felling</option>
+                    <option value="plumbing">Plumbing</option>
+                    <option value="electrical">Electrical</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="description_1">Description</label>
+                <textarea id="description_1" name="description">Emergency tree felling and stump removal.</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="location_1">Location</label>
+                <input type="text" id="location_1" name="location" value="Pretoria East">
+            </div>
+
+            <div class="form-row two-cols">
+                <div class="form-group">
+                    <label for="price_amount_1">Price (ZAR)</label>
+                    <input type="number" id="price_amount_1" name="price_amount" value="1200">
+                </div>
+                <div class="form-group">
+                    <label for="price_unit_1">Price unit</label>
+                    <select id="price_unit_1" name="price_unit">
+                        <option value="per job" selected>per job</option>
+                        <option value="per hour">per hour</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="listing_thumbnail_1">Listing image <span class="photo-optional-label">(optional — keep current if blank)</span></label>
+                <div class="photo-dropzone photo-dropzone-compact" data-thumbnail-dropzone>
+                    <input type="file" id="listing_thumbnail_1" name="listing_thumbnail" accept="image/jpeg,image/png,image/gif,image/webp">
+                    <p class="photo-filename" data-thumbnail-filename>No file selected</p>
+                    <p class="photo-placeholder">Click to choose an image</p>
+                </div>
+                <p class="listing-upload-hint">JPG, PNG, GIF, or WebP — cropped to a standard 4:3 market card size on upload.</p>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-primary">Save listing</button>
+            </div>
+        </form>
+
+        <p class="back-link-wrap">
+            <a href="market.html" class="btn-secondary">Back to market</a>
+        </p>
+    </main>
+</body>
+</html>
